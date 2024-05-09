@@ -1,1 +1,11 @@
-# projeto-planejamento-informatica-
+# projeto-planejamento-informatica
+
+### install
+```
+$ pip install -r requirements.txt
+```
+
+### run
+```
+$ python3 main.py
+```
