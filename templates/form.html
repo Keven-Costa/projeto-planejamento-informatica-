@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Informações Médicas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <h2>Formulário de Informações Médicas</h2>
+
+    <form id="formMedico"  action="{{ url_for('cliente.inserir_cliente') }}" method="POST">
+
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Idade:</label>
+            <input type="number" step="0.1"class="form-control" id="idade" name="idade" placeholder="Digite sua idade">
+        </div>
+
+        <div class="form-group">
+            <label for="sexo">Sexo:</label>
+            <select class="form-control" id="sexo" name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="altura">Altura (cm):</label>
+            <input type="number" step="0.1" class="form-control" id="altura" name="altura" placeholder="Digite sua altura">
+        </div>
+
+        <div class="form-group">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" class="form-control" id="peso" name="peso" placeholder="Digite seu peso">
+        </div>
+
+        <div class="form-group">
+            <label for="pressao_arterial">Pressão Arterial:</label>
+            <input type="text" class="form-control" id="pressao_arterial" name="pressao_arterial" placeholder="Digite a pressão arterial">
+        </div>
+
+        <div class="form-group">
+            <label for="alergias">Alergias:</label>
+            <textarea class="form-control" id="alergias" name="alergias" rows="2" placeholder="Liste suas alergias"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label para="medicamentos_em_uso">Medicamentos em uso:</label>
+            <textarea class="form-control" id="medicamentos_em_uso" name="medicamentos_em_uso" rows="2" placeholder="Quais medicamentos está usando?"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label para="fuma">Fuma:</label>
+            <select class="form-control" id="fuma" name="fuma">
+                <option value="sim">Sim</option>
+                <option value="não">Não</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label para="bebe">Bebe:</label>
+            <select class="form-control" id="bebe" name="bebe">
+                <option value="sim">Sim</option>
+                <option value="não">Não</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label para="parentes_com_doencas">Parentes com doenças:</label>
+            <textarea class="form-control" id="parentes_com_doencas" name="parentes_com_doencas" rows="2" placeholder="Liste parentes com doenças"></textarea>
+        </div>
+        
+        <button    class="btn btn-primary">Enviar</button>
+
+        <a href="http://localhost:5000/" type="submit" class="btn btn-primary mt-3">Voltar para Página Inicial</a>
+    
+    </form>
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+<script src="{{ url_for('static', filename='js/cru.js')  }}"></script>
+
+</body>
+</html>
